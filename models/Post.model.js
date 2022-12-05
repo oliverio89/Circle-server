@@ -19,6 +19,12 @@ const postSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'User'
         },
+        location: {
+            type: {
+                type: String
+            },
+            coordinates: [Number]
+        },
         friends: {
             type: Schema.Types.ObjectId,
             ref: 'User',
