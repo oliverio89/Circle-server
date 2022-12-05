@@ -66,9 +66,19 @@
   - [ 🧙🏽‍♂️ ] Planificación de contextos. ( 2 con los usuarios y los posts)
 
 ## DOMINGO 4
-  - [  ] CREAR MODELOS. USUARIOS Y POSTER 
-  - [  ] Servidor end Point, CREAR ARCHIVO DE RUTAS. 
-  - [  ] test Postman.
+  - [ 🧙🏽‍♂️ ] CREAR MODELOS. USUARIOS Y POSTER 
+  - [ 🧙🏽‍♂️ ] Servidor end Point, CREAR ARCHIVO DE RUTAS. 
+  - [ 🧙🏽‍♂️ ] test Postman.
+
+
+  ## LUNES 5
+- [ 🧙🏽‍♂️ ] Revisión de Modelos.
+- [ ] Ruta de Auth.
+- [ ] Ruta de Post.
+- [ ] Revision de ambas rutas en postman.
+- [ ] 
+
+
   - [  ] VINCULAR BASE DE DATOS CON MONGOO ATLAS.
   - [  ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [  ] Layout inicial
