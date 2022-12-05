@@ -73,13 +73,16 @@
 
   ## LUNES 5
 - [ 🧙🏽‍♂️ ] Revisión de Modelos.
-- [ ] Ruta de Auth.
-- [ ] Ruta de Post.
-- [ ] Revision de ambas rutas en postman.
-- [ ] 
+- [ 🧙🏽‍♂️ ] Ruta de Auth.
+- [ 🧙🏽‍♂️ ] Ruta de Post.
+- [ 🧙🏽‍♂️ ] Revision de ambas rutas en postman.
+- [ ] Page formulario de Login(Joao).
+- [ ] Page formulario de sing up (Xia)
+- [  ] VINCULAR BASE DE DATOS CON MONGOO ATLAS. (victor)
+- [ ] Page Publicaciones.
 
 
-  - [  ] VINCULAR BASE DE DATOS CON MONGOO ATLAS.
+
   - [  ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [  ] Layout inicial
   - [  ] Navbar
