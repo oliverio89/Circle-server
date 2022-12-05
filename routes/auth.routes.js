@@ -4,9 +4,9 @@ const bcrypt = require('bcryptjs')
 const User = require("../models/User.model")
 const saltRounds = 10
 
-// const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
-// const { isAuthenticated } = require('./../middleware/jwt.middleware')
+const { isAuthenticated } = require('./../middleware/jwt.middleware')
 
 
 
@@ -52,55 +52,55 @@ router.post('/signup', (req, res, next) => {
 
 
 
-// router.post('/login', (req, res, next) => {
+router.post('/login', (req, res, next) => {
 
-//     const { email, password } = req.body;
+    const { email, password } = req.body;
 
-//     if (email === '' || password === '') {
-//         res.status(400).json({ message: "Provide email and password." });
-//         return;
-//     }
+    if (email === '' || password === '') {
+        res.status(400).json({ message: "Provide email and password." });
+        return;
+    }
 
-//     User
-//         .findOne({ email })
-//         .then((foundUser) => {
+    User
+        .findOne({ email })
+        .then((foundUser) => {
 
-//             if (!foundUser) {
-//                 res.status(401).json({ message: "User not found." })
-//                 return;
-//             }
+            if (!foundUser) {
+                res.status(401).json({ message: "User not found." })
+                return;
+            }
 
-//             if (bcrypt.compareSync(password, foundUser.password)) {
+            if (bcrypt.compareSync(password, foundUser.password)) {
 
-//                 const { _id, email, username } = foundUser;
+                const { _id, email, username, imageUrl } = foundUser;
 
-//                 const payload = { _id, email, username }
+                const payload = { _id, email, username, imageUrl }
 
-//                 const authToken = jwt.sign(
-//                     payload,
-//                     process.env.TOKEN_SECRET,
-//                     { algorithm: 'HS256', expiresIn: "6h" }
-//                 )
+                const authToken = jwt.sign(
+                    payload,
+                    process.env.TOKEN_SECRET,
+                    { algorithm: 'HS256', expiresIn: "6h" }
+                )
 
-//                 res.status(200).json({ authToken });
-//             }
-//             else {
-//                 res.status(401).json({ message: "Unable to authenticate the user" });
-//             }
+                res.status(200).json({ authToken });
+            }
+            else {
+                res.status(401).json({ message: "Unable to authenticate the user" });
+            }
 
-//         })
-//         .catch(err => {
-//             console.log(err)
-//             res.status(500).json({ message: "Internal Server Error" })
-//         });
-// });
-
-
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json({ message: "Internal Server Error" })
+        });
+});
 
 
-// router.get('/verify', isAuthenticated, (req, res) => {
-//     res.status(200).json(req.payload)
-// })
+
+
+router.get('/verify', isAuthenticated, (req, res) => {
+    res.status(200).json(req.payload)
+})
 
 
 module.exports = router
