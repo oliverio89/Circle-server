@@ -27,11 +27,17 @@ seed... sembrar una base de datos programaticamente, facker,
 
 # URL ( ROUTES CLIENT ) / PAGES
 
-- "/"- HOME PAGE: donde incluimos, login, sing up, about us. ( navbar, footer )
-- "/post" - MURO DE PUBLICACIONES: modal create post, visualización, comentarios, likes, redirect profile, your profile, reportar post( llega un aviso al admin).
-- "/profile" - usuario en detalle- mis publicaciones, mis amigos, mi perfil, imagen, description, email, username, 
-- "/admin-panel" - panel de dirección: ver usuarios, recibe report de post, CRUD de usuarios, CRUD de post.
-- "/about-us" - Información developers. Contacto Modal.
+
+| URI path      | Description              | Protect    |
+| ------------- | ------------------------ | ---------- |
+| `/`           | HOME PAGE: donde incluimos, login, sing up, about us. ( navbar, footer )         |      NO      |
+| `/post`       | MURO DE PUBLICACIONES: modal create post, visualización, comentarios, likes, redirect profile, your profile, reportar post( llega un aviso al admin)          |       SI     |        
+| `/profile`    | usuario en detalle- mis publicaciones, mis amigos, mi perfil, imagen, description, email, username, |      SI      |  
+| `/admin-panel`| panel de dirección: ver usuarios, recibe report de post, CRUD de usuarios, CRUD de post. |      SI,SOLO ADMIN      | 
+| `/about-us`   | Información developers. Contacto Modal. |      NO      | 
+
+
+
 
 # CONTEXTOS
 

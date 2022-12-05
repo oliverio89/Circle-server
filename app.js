@@ -13,8 +13,7 @@ const app = express();
 require("./config")(app);
 
 
-const indexRoutes = require("./routes/index.routes");
-app.use("/api", indexRoutes);
+require("./routes")(app);
 
 
 require("./error-handling")(app);
