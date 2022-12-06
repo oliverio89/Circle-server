@@ -78,8 +78,14 @@
 - [ 🧙🏽‍♂️ ] Revision de ambas rutas en postman.
 - [ ] Page formulario de Login(Joao).
 - [ ] Page formulario de sing up (Xia)
-- [  ] VINCULAR BASE DE DATOS CON MONGOO ATLAS. (victor)
+- [ 🧙🏽‍♂️ ] VINCULAR BASE DE DATOS CON MONGOO ATLAS. (victor)
 - [ ] Page Publicaciones.
+
+## MARTES 6
+- [ ] TERMINAR LOGIN.
+- [ ] TERMINAR MURO.
+- [ ] TERMINAR MODELOS Y SING UP.
+
 
 
 

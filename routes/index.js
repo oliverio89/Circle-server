@@ -9,5 +9,8 @@ module.exports = app => {
   const postsRoutes = require("./posts.routes");
   app.use("/api/posts", postsRoutes)
 
+  const uploadRoutes = require("./upload.routes");
+  app.use("/api/upload", uploadRoutes)
+
 
 }
