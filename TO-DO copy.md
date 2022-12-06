@@ -69,6 +69,7 @@
   - [ 🧙🏽‍♂️ ] CREAR MODELOS. USUARIOS Y POSTER 
   - [ 🧙🏽‍♂️ ] Servidor end Point, CREAR ARCHIVO DE RUTAS. 
   - [ 🧙🏽‍♂️ ] test Postman.
+  - [ 🧙🏽‍♂️ ] Enrutado, crear componenetes approutes.
 
 
   ## LUNES 5
@@ -76,15 +77,25 @@
 - [ 🧙🏽‍♂️ ] Ruta de Auth.
 - [ 🧙🏽‍♂️ ] Ruta de Post.
 - [ 🧙🏽‍♂️ ] Revision de ambas rutas en postman.
-- [ ] Page formulario de Login(Joao).
-- [ ] Page formulario de sing up (Xia)
+- [ 🧙🏽‍♂️ ] Page formulario de Login(Joao).
+- [ 🧙🏽‍♂️ ] Page formulario de sing up (Xia)
 - [ 🧙🏽‍♂️ ] VINCULAR BASE DE DATOS CON MONGOO ATLAS. (victor)
-- [ ] Page Publicaciones.
+- [ 🧙🏽‍♂️ ] Page Publicaciones.
+- [ 🧙🏽‍♂️ ] Implementar Toasted, alertas periféricas.
 
 ## MARTES 6
-- [ ] TERMINAR LOGIN.
-- [ ] TERMINAR MURO.
+- [ 🧙🏽‍♂️ ] Desarrollar servicio de allPosters.
+- [ 🧙🏽‍♂️ ] Page of Poster.
+- [ ] TERMINAR LOGIN. Modal
+- [ 🧙🏽‍♂️ ] TERMINAR MURO. 
 - [ ] TERMINAR MODELOS Y SING UP.
+- [ 🧙🏽‍♂️ ] Vincularse con al api para extraer la información.
+- [ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
+- [ 🧙🏽‍♂️ ] Verificación
+- [ ] Formulario para nuevo posts. Integrar el formulario en la ventana Modal.
+- [ ] Componente: listado de publicación.
+- [ ] Renderizado condicional.
+
 
 
 
@@ -105,28 +116,20 @@
 
 ## DÍAS SIGUIENTES
 
-- [ ] Enrutado, crear componenetes approutes.
-- [ ] Vincularse con al api para extraer la información.
-- [ ] Page of Poster.
 - [ ] Page details of one poster. ( revisar? )
-- [ ] Formulario para nuevo poster. Integrar el formulario en la ventana Modal.
-- [ ] Implementar Toasted, alertas periféricas.
---- [ ] Auth:
-- [ ] Formulario sing up, en servidor.
-- [ ] Formulario de sing up en cliente.
-- [ ] Formulario de Login en servidor.
-- [ ] Formulario de Login en cliente.
-- [ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
-- [ ] Verificación
 - [ ] Protección de rutas.
-
-
-
-- [ ] Desarrollar servicio de allPosters.
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Componente: listado de amigos.
-- [ ] Componente: listado de publicación.
-- [ ] Renderizado condicional.
+- [ ] Spinner de carga.
+- [ ] Comentarios de Post.
+- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
+- [ ] Código de errores.
+- [ ] Page of About us.
+- [ ]  PAge of panel of admin.
+- [ ] Revisar carpeta public.
+- [ ] Checkear rutas de gotPost a getPosts...(revisar).
+
+
 
 
 

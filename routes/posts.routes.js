@@ -1,9 +1,10 @@
 
 const router = require("express").Router()
 
+const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
-router.get("/getAllPosts", (req, res, next) => {
+router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     Post
         .find()
@@ -13,7 +14,7 @@ router.get("/getAllPosts", (req, res, next) => {
 })
 
 
-router.get("/getOnePost/:post_id", (req, res, next) => {
+router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 
     const { post_id } = req.params
 
@@ -24,12 +25,14 @@ router.get("/getOnePost/:post_id", (req, res, next) => {
 })
 
 
-router.post("/savePost", (req, res, next) => {
+router.post("/savePost", isAuthenticated, (req, res, next) => {
+
+    const { title, description, imageUrl } = req.body
 
     Post
-        .create(req.body)
+        .create({ title, description, imageUrl, owner: req.payload._id })
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 })
 
-module.exports = router
+module.exports = router 
