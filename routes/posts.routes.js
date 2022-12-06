@@ -3,11 +3,11 @@ const router = require("express").Router()
 
 const Post = require('./../models/Post.model')
 
-router.get("/getAllPosts", (req, res) => {
+router.get("/getAllPosts", (req, res, next) => {
 
     Post
         .find()
-        .select({ timestamps: 1 })
+        .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => res.status(500).json(err))
 })
@@ -24,7 +24,7 @@ router.get("/getOnePost/:post_id", (req, res, next) => {
 })
 
 
-router.post("/savePost", (req, res) => {
+router.post("/savePost", (req, res, next) => {
 
     Post
         .create(req.body)
