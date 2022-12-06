@@ -11,10 +11,10 @@ const { isAuthenticated } = require('./../middleware/jwt.middleware')
 
 
 router.post('/signup', (req, res, next) => {
-    const { email, password, username } = req.body
+    // const { email, password, username } = req.body
 
 
-    // const { email, password, name, username, imageUrl, bio } = req.body
+    const { email, password, name, username, imageUrl, bio } = req.body
 
 
 
@@ -35,17 +35,16 @@ router.post('/signup', (req, res, next) => {
 
             const salt = bcrypt.genSaltSync(saltRounds)
             const hashedPassword = bcrypt.hashSync(password, salt)
-            console.log('hiiiii', { email, password: hashedPassword, username })
-            return User.create({ email, password: hashedPassword, username })
-            // return User.create({ email, password: hashedPassword, username, name, imageUrl, bio })
+            // return User.create({ email, password: hashedPassword, username })
+            return User.create({ email, password: hashedPassword, username, name, imageUrl, bio })
         })
         .then((createdUser) => {
 
-            // const { email, username, name, _id, imageUrl, bio } = createdUser
-            // const user = { email, username, name, _id, imageUrl, bio }
+            const { email, username, name, _id, imageUrl, bio } = createdUser
+            const user = { email, username, name, _id, imageUrl, bio }
 
-            const { email, username, _id } = createdUser
-            const user = { email, username, _id }
+            // const { email, username, _id } = createdUser
+            // const user = { email, username, _id }
 
             res.status(201).json({ user })
         })
@@ -83,9 +82,9 @@ router.post('/login', (req, res, next) => {
 
             if (bcrypt.compareSync(password, foundUser.password)) {
 
-                const { _id, email, username, imageUrl } = foundUser;
+                const { _id, email, username, imageUrl, name, bio } = foundUser;
 
-                const payload = { _id, email, username, imageUrl }
+                const payload = { _id, email, username, imageUrl, name, bio }
 
                 const authToken = jwt.sign(
                     payload,
