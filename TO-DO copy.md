@@ -86,22 +86,16 @@
 ## MARTES 6
 - [ 🧙🏽‍♂️ ] Desarrollar servicio de allPosters.
 - [ 🧙🏽‍♂️ ] Page of Poster.
-- [ ] TERMINAR LOGIN. Modal
 - [ 🧙🏽‍♂️ ] TERMINAR MURO. 
-- [ ] TERMINAR MODELOS Y SING UP.
+- [ 🧙🏽‍♂️ ] TERMINAR MODELOS Y SING UP.
 - [ 🧙🏽‍♂️ ] Vincularse con al api para extraer la información.
-- [ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
+- [ 🧙🏽‍♂️ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
 - [ 🧙🏽‍♂️ ] Verificación
-- [ ] Formulario para nuevo posts. Integrar el formulario en la ventana Modal.
-- [ ] Componente: listado de publicación.
-- [ ] Renderizado condicional.
-
-
-
-
-
-  - [  ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
-- [  ] Layout inicial
+- [ 🧙🏽‍♂️ ] Formulario para nuevo posts. Integrar el formulario en la ventana Modal.
+- [ 🧙🏽‍♂️ ] Componente: listado de publicación.
+- [ 🧙🏽‍♂️ ] Renderizado condicional.
+- [ 🧙🏽‍♂️ ] TERMINAR LOGIN. Modal
+- [ 🧙🏽‍♂️ ] Layout inicial
   - [  ] Navbar
   - [  ] HomePage 
   - [  ] Sing up 
@@ -114,10 +108,19 @@
   - [  ] Footer
 
 
-## DÍAS SIGUIENTES
+## MIERCOLES 7
+- [ ] Protección de rutas, private rutes... week8, day 1.
+- [ ] Gestión de errores. ( )
+- [ ] Unificar modales de login y sing up.
+- [ ] Modificación de Toast para Logín, condicional, si ya está conectado el usuario.
 
+
+
+
+
+## DÍAS SIGUIENTES
+- [  ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Page details of one poster. ( revisar? )
-- [ ] Protección de rutas.
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Componente: listado de amigos.
 - [ ] Spinner de carga.
@@ -125,7 +128,7 @@
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
 - [ ] Código de errores.
 - [ ] Page of About us.
-- [ ]  PAge of panel of admin.
+- [ ] Page of panel of admin.
 - [ ] Revisar carpeta public.
 - [ ] Checkear rutas de gotPost a getPosts...(revisar).
 
