@@ -36,10 +36,7 @@ router.post('/signup', (req, res, next) => {
             const user = { email, username, name, _id, imageUrl, bio }
             res.status(201).json({ user })
         })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json({ message: "Internal Server Error" })
-        })
+        .catch(err => next(err));
 })
 
 
@@ -81,10 +78,7 @@ router.post('/login', (req, res, next) => {
             }
 
         })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json({ message: "Internal Server Error" })
-        });
+        .catch(err => next(err));
 });
 
 
