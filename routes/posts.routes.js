@@ -10,7 +10,7 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
         .find()
         .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
-        .catch(err => res.status(500).json(err))
+        .catch(err => next(err));
 })
 
 
@@ -32,7 +32,7 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
     Post
         .create({ title, description, imageUrl, owner: req.payload._id })
         .then(response => res.json(response))
-        .catch(err => res.status(500).json(err))
+        .catch(err => next(err));
 })
 
 module.exports = router 
