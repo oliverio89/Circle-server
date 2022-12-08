@@ -141,8 +141,10 @@
 - [ ] Page of panel of admin.
 - [ ] Revisar carpeta public.
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
-- [ ] 
-
+- [ ] postdeatale.page punto 13, useeffect, sacar función post. punto 20 deconstruir.
+- [ ] profile: deconstruir.
+- [ ] post.page: 
+- [ ] post card : import context, ussermessage. ver, la posibilidad de utilizar los models, como contexto global.
 
 
 
