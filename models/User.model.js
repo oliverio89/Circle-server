@@ -27,10 +27,10 @@ const userSchema = new Schema(
       default: 'hola mundo'
 
     },
-    friends: {
+    friends: [{
       type: Schema.Types.ObjectId,
       ref: 'User',
-    },
+    }],
     createdPosts: [
       {
         type: Schema.Types.ObjectId,
