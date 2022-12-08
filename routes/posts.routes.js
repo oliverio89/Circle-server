@@ -28,29 +28,31 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 router.post("/savePost", isAuthenticated, (req, res, next) => {
 
     const { title, description, imageUrl } = req.body
+    const { _id: owner } = req.payload
 
     Post
-        .create({ title, description, imageUrl, owner: req.payload._id })
+        .create({ title, description, imageUrl, owner })
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 
 })
 
 
-router.post("/edit/:post_id", isAuthenticated, (req, res, next) => {
-    const { post_id } = req.params;
+router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
+    const { post_id } = req.params
     const { title, description, imageUrl } = req.body
+
 
     Post
         .findByIdAndUpdate(post_id, { title, description, imageUrl })
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+})
 
 
 
 
-router.post("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
+router.delete("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
 
     const { post_id } = req.params
 
