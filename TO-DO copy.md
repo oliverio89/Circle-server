@@ -119,22 +119,29 @@
 - [ 🧙🏽‍♂️ ] Cambiar nombre de la navbar por el perfil.
 - [ 🧙🏽‍♂️ ] Editar y eleminir Post, y reload.
 - [ 🧙🏽‍♂️ ] envia correo de información tras registro
+- [ 🧙🏽‍♂️ ] Page of About us.
+- [ 🧙🏽‍♂️ ] Código de errores.
+
+## JUEVES 8
+- [ ] Formulario de singup, ingresar cloudinari.
+- [ ] Editar y Eliminar Post.
+- [ ] Comentarios de Post. (victor, gestión de errores.)
+- [ ] Profile Page.
+- [ ] 
 
 
 
 
 
 ## DÍAS SIGUIENTES
-- [ ] Código de errores.
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Componente: listado de amigos.
-- [ ] Comentarios de Post.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Page of About us.
 - [ ] Page of panel of admin.
 - [ ] Revisar carpeta public.
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
+- [ ] 
 
 
 

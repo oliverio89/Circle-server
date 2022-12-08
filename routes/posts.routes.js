@@ -34,16 +34,33 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 
-
-    router.post("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
-
-        const { post_id } = req.params
-
-        Post
-            .findByIdAndDelete(post_id)
-            .then(response => res.json(response))
-            .catch(err => next(err))
-    })
 })
+
+
+router.post("/edit/:post_id", isAuthenticated, (req, res, next) => {
+    const { post_id } = req.params;
+    const { title, description, imageUrl } = req.body
+
+    Post
+        .findByIdAndUpdate(post_id, { title, description, imageUrl })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+});
+
+
+
+
+router.post("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
+
+    const { post_id } = req.params
+
+    Post
+        .findByIdAndDelete(post_id)
+        .then(response => res.json(response))
+        .catch(err => next(err))
+
+
+})
+
 
 module.exports = router 
