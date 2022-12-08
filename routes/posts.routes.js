@@ -33,6 +33,17 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
         .create({ title, description, imageUrl, owner: req.payload._id })
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
+
+
+    router.post("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
+
+        const { post_id } = req.params
+
+        Post
+            .findByIdAndDelete(post_id)
+            .then(response => res.json(response))
+            .catch(err => next(err))
+    })
 })
 
 module.exports = router 

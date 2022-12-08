@@ -86,22 +86,16 @@
 ## MARTES 6
 - [ 🧙🏽‍♂️ ] Desarrollar servicio de allPosters.
 - [ 🧙🏽‍♂️ ] Page of Poster.
-- [ ] TERMINAR LOGIN. Modal
 - [ 🧙🏽‍♂️ ] TERMINAR MURO. 
-- [ ] TERMINAR MODELOS Y SING UP.
+- [ 🧙🏽‍♂️ ] TERMINAR MODELOS Y SING UP.
 - [ 🧙🏽‍♂️ ] Vincularse con al api para extraer la información.
-- [ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
+- [ 🧙🏽‍♂️ ] Gestión del usuario Logeado. servidor y cliente. renderizado condicional.
 - [ 🧙🏽‍♂️ ] Verificación
-- [ ] Formulario para nuevo posts. Integrar el formulario en la ventana Modal.
-- [ ] Componente: listado de publicación.
-- [ ] Renderizado condicional.
-
-
-
-
-
-  - [  ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
-- [  ] Layout inicial
+- [ 🧙🏽‍♂️ ] Formulario para nuevo posts. Integrar el formulario en la ventana Modal.
+- [ 🧙🏽‍♂️ ] Componente: listado de publicación.
+- [ 🧙🏽‍♂️ ] Renderizado condicional.
+- [ 🧙🏽‍♂️ ] TERMINAR LOGIN. Modal
+- [ 🧙🏽‍♂️ ] Layout inicial
   - [  ] Navbar
   - [  ] HomePage 
   - [  ] Sing up 
@@ -114,21 +108,33 @@
   - [  ] Footer
 
 
-## DÍAS SIGUIENTES
+## MIERCOLES 7
+- [ 🧙🏽‍♂️ ] Protección de rutas, private rutes... week8, day 1.
+- [ 🧙🏽‍♂️ ] Unificar modales de login y sing up.
+- [ 🧙🏽‍♂️ ] Gestión de errores. ( en revisión )
+- [ 🧙🏽‍♂️ ] Modificación de Toast para Logín, condicional, si ya está conectado el usuario. ( en revisión)
+- [ 🧙🏽‍♂️ ] Page details of one poster. ( revisar? )
+- [ 🧙🏽‍♂️ ] Spinner de carga.
+- [ 🧙🏽‍♂️ ] Checkear rutas de gotPost a getPosts...(revisar).
+- [ 🧙🏽‍♂️ ] Cambiar nombre de la navbar por el perfil.
+- [ 🧙🏽‍♂️ ] Editar y eleminir Post, y reload.
+- [ 🧙🏽‍♂️ ] envia correo de información tras registro
 
-- [ ] Page details of one poster. ( revisar? )
-- [ ] Protección de rutas.
+
+
+
+
+## DÍAS SIGUIENTES
+- [ ] Código de errores.
+- [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Componente: listado de amigos.
-- [ ] Spinner de carga.
 - [ ] Comentarios de Post.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Código de errores.
 - [ ] Page of About us.
-- [ ]  PAge of panel of admin.
+- [ ] Page of panel of admin.
 - [ ] Revisar carpeta public.
-- [ ] Checkear rutas de gotPost a getPosts...(revisar).
-
+- [ ] Multipoligono con la geolocalización por barrios, con geodata.
 
 
 
