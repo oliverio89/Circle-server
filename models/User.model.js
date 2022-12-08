@@ -27,6 +27,22 @@ const userSchema = new Schema(
       default: 'hola mundo'
 
     },
+    friends: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+    createdPosts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Post',
+      }
+    ],
+    // favPosts: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Post',
+    //   }
+    // ],
     bio: {
       type: String
     },

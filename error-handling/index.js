@@ -6,7 +6,7 @@ module.exports = (app) => {
   app.use((err, req, res, next) => {
 
     if (err.code && err.code === 11000) {
-      res.status(409).json({ errorMessages: ['Usuario ya registrado'] })
+      res.status(409).json({ errorMessages: ['El registro ya se encuentra presente en la base de datos'] })
     }
 
     if (err.name === 'ValidationError') {

@@ -5,11 +5,11 @@ const postSchema = new Schema(
 
         title: {
             type: String,
-            required: true
+            required: [true, 'El título es obligatorio.']
         },
         description: {
             type: String,
-            required: true,
+            required: [true, 'La descripción es obligatoria.'],
             minlength: [20, 'La descripción debe tener min. 20 caracteres']
         },
         imageUrl: {
@@ -24,10 +24,6 @@ const postSchema = new Schema(
                 type: String
             },
             coordinates: [Number]
-        },
-        friends: {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
         },
         likes: {
             type: Schema.Types.ObjectId,
