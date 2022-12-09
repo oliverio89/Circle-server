@@ -2,15 +2,16 @@ const router = require("express").Router()
 const { isAuthenticated } = require("../middleware/jwt.middleware")
 const User = require('./../models/User.model')
 
-
 router.put("/editUser/:user_id", isAuthenticated, (req, res, next) => {
     const { user_id } = req.params
     const { name, bio, imageUrl } = req.body
 
-
+    console.log(name)
     User
         .findByIdAndUpdate(user_id, { name, bio, imageUrl })
-        .then(response => res.json(response))
+        .then((response) => {
+            res.json(response)
+        })
         .catch(err => next(err))
 })
 
