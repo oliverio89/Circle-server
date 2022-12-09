@@ -30,10 +30,12 @@ const postSchema = new Schema(
             },
             coordinates: [Number]
         },
-        likes: {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
-        },
+        likes: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User',
+            }
+        ],
         comments: [{
             type: Schema.Types.ObjectId,
             ref: 'Comment',
