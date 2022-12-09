@@ -128,7 +128,17 @@
 - [ ] Comentarios de Post. (victor, gestión de errores.)
 - [ 🧙🏽‍♂️ ] Profile Page.
 - [ 🧙🏽‍♂️ ] Page of panel of admin.
-- [  ]  
+
+
+## VIERNES 9
+- [ ] Page of comment details.
+- [ ] Comentarios de Publicación.
+- [ ] Agregar amigos.
+- [ ] Componente: listado de amigos.
+- [ ] Like.
+- [ ] Agregar a favoritos.
+- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
+- [ ] 
 
 
 
@@ -137,13 +147,7 @@
 ## DÍAS SIGUIENTES
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
-- [ ] Componente: listado de amigos.
-- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
 - [ ] Revisar carpeta public.
-- [ ] Agregar amigos.
-- [ ] Comentarios de Publicación.
-- [ ] Like.
-- [ ] Agregar a favoritos.
 
 
 
@@ -153,6 +157,11 @@
 - [ ] profile: deconstruir.
 - [ ] post.page: 
 - [ ] post card : import context, ussermessage. ver, la posibilidad de utilizar los models, como contexto global.
+
+
+console.log( con el id del comentario), una segunda klamada para el post un findbyid, donde actualicemos el post para meterle el id del comentario. push más return, populate comentario, add to set.
+
+
 
 
 

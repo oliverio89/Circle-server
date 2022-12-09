@@ -31,6 +31,7 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
 
     const { title, description, imageUrl } = req.body
     const { _id: owner, imageUrl: imageOwner } = req.payload
+    console.log(imageOwner)
 
     Post
         .create({ title, description, imageUrl, owner, imageOwner })
