@@ -1,19 +1,24 @@
 const router = require("express").Router()
-
-// const { isAuthenticated } = require("../middleware/jwt.middleware")
+const Post = require('./../models/Post.model')
+const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Comment = require('./../models/Comment.model')
 
-// router.post("/saveComment", isAuthenticated, (req, res, next) =>
-router.post("/saveComment", (req, res, next) => {
-    const { _id: owner } = req.params
+router.post("/saveComment/:post_id", isAuthenticated, (req, res, next) => {
+    const owner = req.payload._id
     const { description } = req.body
+    const { post_id } = req.params
+
+
+    let commentId
 
     Comment
         .create({ owner, description })
-        .then(response => res.json(response))
+        .then(comment => {
+            commentId = comment._id.toString()
+            return Post.findByIdAndUpdate(post_id, { $push: { 'comments': commentId } }, { new: true })
+        })
+        .then((post) => { res.json(post) })
         .catch(err => res.status(500).json(err))
-
 })
-
 
 module.exports = router 

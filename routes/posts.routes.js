@@ -8,10 +8,12 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     Post
         .find()
+        .populate({ path: "comments", populate: { path: "owner" } })
         .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
 })
+
 
 
 router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
