@@ -74,6 +74,8 @@ router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
 
 
 
+
+
 router.delete("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
 
     const { post_id } = req.params
