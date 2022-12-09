@@ -123,18 +123,18 @@
 - [ 🧙🏽‍♂️ ] Código de errores.
 
 ## JUEVES 8
-- [ ] Formulario de singup, ingresar cloudinari.
+- [ 🧙🏽‍♂️ ] Formulario de singup, ingresar cloudinari.
 - [ 🧙🏽‍♂️ ] Editar y Eliminar Post.
-- [ ] Comentarios de Post. (victor, gestión de errores.)
+- [ 🧙🏽‍♂️ ] Comentarios de Post. (victor, gestión de errores.)
 - [ 🧙🏽‍♂️ ] Profile Page.
 - [ 🧙🏽‍♂️ ] Page of panel of admin.
 
 
 ## VIERNES 9
-- [ ] Page of comment details.
-- [ ] Comentarios de Publicación.
-- [ ] Agregar amigos.
-- [ ] Componente: listado de amigos.
+- [ 🧙🏽‍♂️ ] Page of comment details.
+- [ 🧙🏽‍♂️ ] Comentarios de Publicación.
+- [ 🧙🏽‍♂️ ] Agregar amigos.
+- [ 🧙🏽‍♂️ ] Componente: listado de amigos.
 - [ ] Like.
 - [ ] Agregar a favoritos.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
@@ -148,10 +148,12 @@
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
+- [ ] revisar vista de detalles de publicaciones para agregar los comentarios.
 
 
 
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
+- [ ] dejar el editar del perfil para una posterior revisión, ya que al modificar el usuario no modificamos el token del usuario de donde bebe el usuario.
 ## code revew:
 - [ ] postdeatale.page punto 13, useeffect, sacar función post. punto 20 deconstruir.
 - [ ] profile: deconstruir.

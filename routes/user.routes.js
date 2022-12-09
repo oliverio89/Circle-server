@@ -25,13 +25,14 @@ router.delete("/deleteUser/:user_id", isAuthenticated, (req, res, next) => {
 
 // add new friend
 
-router.post('/addFriend', (req, res, next) => {
-    const { user_id } = req.body
-    const { _id: owner } = req.payload
+router.post('/addFriend/:user_id', isAuthenticated, (req, res, next) => {
+    const { user_id } = req.params
+    const owner = req.payload._id
+    console.log("soy owner", owner, "soy user_id", user_id)
 
 
     User
-        .findByIdAndUpdate(user_id, { "$push": { "friends": owner } })
+        .findByIdAndUpdate(user_id, { $push: { "friends": owner } })
         .then()
         .catch((err) => next(err))
 
