@@ -138,7 +138,7 @@
 - [ ] Like.
 - [ ] Agregar a favoritos.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] 
+- [ ] pull likes, para quitar los id con otra ruta y otro botón.
 
 
 
