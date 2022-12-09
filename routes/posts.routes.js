@@ -23,6 +23,7 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 
     Post
         .findById(post_id)
+        .populate({ path: "comments", populate: { path: "owner" } })
         .then(response => res.json(response))
         .catch(err => next(err))
 })

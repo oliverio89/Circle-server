@@ -135,8 +135,7 @@
 - [ 🧙🏽‍♂️ ] Comentarios de Publicación.
 - [ 🧙🏽‍♂️ ] Agregar amigos.
 - [ 🧙🏽‍♂️ ] Componente: listado de amigos.
-- [ ] Like.
-- [ ] Agregar a favoritos.
+- [ 🧙🏽‍♂️] Like.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
 - [ ] pull likes, para quitar los id con otra ruta y otro botón.
 
@@ -145,6 +144,7 @@
 
 
 ## DÍAS SIGUIENTES
+- [ ] Agregar a favoritos.
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
