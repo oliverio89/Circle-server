@@ -124,10 +124,11 @@
 
 ## JUEVES 8
 - [ ] Formulario de singup, ingresar cloudinari.
-- [ ] Editar y Eliminar Post.
+- [ 🧙🏽‍♂️ ] Editar y Eliminar Post.
 - [ ] Comentarios de Post. (victor, gestión de errores.)
-- [ ] Profile Page.
-- [ ] 
+- [ 🧙🏽‍♂️ ] Profile Page.
+- [ 🧙🏽‍♂️ ] Page of panel of admin.
+- [  ]  
 
 
 
@@ -138,9 +139,16 @@
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Componente: listado de amigos.
 - [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Page of panel of admin.
 - [ ] Revisar carpeta public.
+- [ ] Agregar amigos.
+- [ ] Comentarios de Publicación.
+- [ ] Like.
+- [ ] Agregar a favoritos.
+
+
+
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
+## code revew:
 - [ ] postdeatale.page punto 13, useeffect, sacar función post. punto 20 deconstruir.
 - [ ] profile: deconstruir.
 - [ ] post.page: 

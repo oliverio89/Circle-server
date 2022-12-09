@@ -19,6 +19,11 @@ const postSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'User'
         },
+        imageOwner: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
+
         location: {
             type: {
                 type: String
