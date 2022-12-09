@@ -28,11 +28,14 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 router.post("/savePost", isAuthenticated, (req, res, next) => {
 
     const { title, description, imageUrl } = req.body
-    const { _id: owner } = req.payload
+    const { _id: owner, imageUrl: imageOwner } = req.payload
 
     Post
-        .create({ title, description, imageUrl, owner })
-        .then(response => res.json(response))
+        .create({ title, description, imageUrl, owner, imageOwner })
+        .then(response => {
+            console.log(response)
+            res.json(response)
+        })
         .catch(err => res.status(500).json(err))
 
 })
