@@ -9,6 +9,7 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
     Post
         .find()
         .populate({ path: "comments", populate: { path: "owner" } })
+        // .populate({ path: "likes" })
         .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
@@ -54,6 +55,20 @@ router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => next(err))
 })
+
+router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
+    const currentUser = req.payload._id
+    console.log("hiii I'm", currentUser)
+    const comenData = req.params
+    console.log("hiii ooooooooiiiiii", comenData.comenData)
+
+    Post
+        .findByIdAndUpdate(comenData.comenData, { $addToSet: { 'likes': currentUser } }, { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+})
+
+
 
 
 
