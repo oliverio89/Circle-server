@@ -38,7 +38,6 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
     Post
         .create({ title, description, imageUrl, owner })
         .then(response => {
-            console.log(response)
             res.json(response)
         })
         .catch(err => res.status(500).json(err))
@@ -59,9 +58,8 @@ router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
 
 router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
-    console.log("hiii I'm", currentUser)
+
     const comenData = req.params
-    console.log("hiii ooooooooiiiiii", comenData.comenData)
 
     Post
         .findByIdAndUpdate(comenData.comenData, { $addToSet: { 'likes': currentUser } }, { new: true })

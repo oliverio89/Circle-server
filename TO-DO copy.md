@@ -135,9 +135,16 @@
 - [ 🧙🏽‍♂️ ] Comentarios de Publicación.
 - [ 🧙🏽‍♂️ ] Agregar amigos.
 - [ 🧙🏽‍♂️ ] Componente: listado de amigos.
-- [ 🧙🏽‍♂️] Like.
-- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
+- [ 🧙🏽‍♂️ ] Like.
+- [ 🧙🏽‍♂️ ] revisar vista de detalles de publicaciones para agregar los comentarios.
+
+
+## SABADO 10
 - [ ] pull likes, para quitar los id con otra ruta y otro botón.
+- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
+- [ ] Dislike.
+- [ ] Llamar publicaciones en la pantalla de perfil.
+- [ ] Push Array de post al crear, ahce Joao.
 
 
 
@@ -148,20 +155,20 @@
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
-- [ ] revisar vista de detalles de publicaciones para agregar los comentarios.
+- [ ] Renderizado condicional por Roles.
 
 
 
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
 - [ ] dejar el editar del perfil para una posterior revisión, ya que al modificar el usuario no modificamos el token del usuario de donde bebe el usuario.
+
 ## code revew:
-- [ ] postdeatale.page punto 13, useeffect, sacar función post. punto 20 deconstruir.
+
 - [ ] profile: deconstruir.
 - [ ] post.page: 
 - [ ] post card : import context, ussermessage. ver, la posibilidad de utilizar los models, como contexto global.
 
 
-console.log( con el id del comentario), una segunda klamada para el post un findbyid, donde actualicemos el post para meterle el id del comentario. push más return, populate comentario, add to set.
 
 
 
