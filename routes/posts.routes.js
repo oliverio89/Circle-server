@@ -4,6 +4,7 @@ const router = require("express").Router()
 const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
+
 router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     Post
@@ -44,6 +45,18 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
 
 })
 
+// router.put("/myCreated/:myCreatedData", isAuthenticated, (req, res, next) => {
+//     const currentUser = req.payload._id
+
+//     const myCreatedData = req.params
+
+//     Post
+//         .findByIdAndUpdate(myCreatedData.myCreatedData, { $push: { 'createdPosts': currentUser } }, { new: true })
+//         .then(response => res.json(response))
+//         .catch(err => next(err))
+// })
+
+
 
 router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
     const { post_id } = req.params
@@ -58,7 +71,6 @@ router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
 
 router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
-
     const comenData = req.params
 
     Post
@@ -67,10 +79,17 @@ router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 })
 
+// quitar el like
 
+router.put("/dislikePost/:disLikeData", isAuthenticated, (req, res, next) => {
+    const currentUser = req.payload._id
+    const disLikeData = req.params
 
-
-
+    Post
+        .findByIdAndUpdate(disLikeData.disLikeData, { $pull: { 'likes': currentUser } }, { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+})
 
 
 
