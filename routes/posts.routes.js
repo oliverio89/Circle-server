@@ -45,6 +45,18 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
 
 })
 
+// router.put("/myCreated/:myCreatedData", isAuthenticated, (req, res, next) => {
+//     const currentUser = req.payload._id
+
+//     const myCreatedData = req.params
+
+//     Post
+//         .findByIdAndUpdate(myCreatedData.myCreatedData, { $push: { 'createdPosts': currentUser } }, { new: true })
+//         .then(response => res.json(response))
+//         .catch(err => next(err))
+// })
+
+
 
 router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
     const { post_id } = req.params
