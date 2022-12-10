@@ -4,6 +4,7 @@ const router = require("express").Router()
 const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
+
 router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     Post
@@ -59,9 +60,8 @@ router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
 
 router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
-    console.log("hiii I'm", currentUser)
     const comenData = req.params
-    console.log("hiii ooooooooiiiiii", comenData.comenData)
+
 
     Post
         .findByIdAndUpdate(comenData.comenData, { $addToSet: { 'likes': currentUser } }, { new: true })
@@ -69,10 +69,17 @@ router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 })
 
+// quitar el like
 
-
-
-
+router.put("/dislikePost/:disLikeData", isAuthenticated, (req, res, next) => {
+    const currentUser = req.payload._id
+    const disLikeData = req.params
+    console.log("hiii I'm req.params", disLikeData.disLikeData)
+    Post
+        .findByIdAndUpdate(disLikeData.disLikeData, { $pull: { 'likes': currentUser } }, { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+})
 
 
 
