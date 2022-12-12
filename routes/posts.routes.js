@@ -1,6 +1,6 @@
 
 const router = require("express").Router()
-
+const User = require('./../models/User.model')
 const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
@@ -33,25 +33,31 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 router.post("/savePost", isAuthenticated, (req, res, next) => {
 
     const { title, description, imageUrl } = req.body
-    const { _id: owner } = req.payload
+    const owner = req.payload
+    console.log("hiiiooooooo", owner)
 
 
     Post
         .create({ title, description, imageUrl, owner })
         .then(response => {
             res.json(response)
+            // User
+            //     .findByIdAndUpdate(user_id, { $addToSet: { "createdPosts": owner._id } })
+            //     .then(response => res.json(response))
         })
+
         .catch(err => res.status(500).json(err))
 
 })
 
 // router.put("/myCreated/:myCreatedData", isAuthenticated, (req, res, next) => {
-//     const currentUser = req.payload._id
 
-//     const myCreatedData = req.params
+//     const currentUser = req.payload._id
+//     const { post_id } = req.params
+//     console.log(req.params)
 
 //     Post
-//         .findByIdAndUpdate(myCreatedData.myCreatedData, { $push: { 'createdPosts': currentUser } }, { new: true })
+//         .findByIdAndUpdate(myCreatedData, { $push: { 'createdPosts': currentUser } }, { new: true })
 //         .then(response => res.json(response))
 //         .catch(err => next(err))
 // })
