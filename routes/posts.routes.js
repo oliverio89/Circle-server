@@ -55,9 +55,6 @@ router.post("/savePost", isAuthenticated, (req, res, next) => {
         })
 })
 
-
-
-
 router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
     const { post_id } = req.params
     const { title, description, imageUrl } = req.body
