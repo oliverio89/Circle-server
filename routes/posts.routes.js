@@ -9,9 +9,9 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     Post
         .find()
+        .sort({ createdAt: -1 })
+        .populate({ path: "owner" })
         .populate({ path: "comments", populate: { path: "owner" } })
-        // .populate({ path: "likes" })
-        .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
 })
@@ -97,6 +97,17 @@ router.put("/dislikePost/:disLikeData", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 })
 
+//reportar un post
+
+router.put("/reportPost/:report", isAuthenticated, (req, res, next) => {
+    const currentUser = req.payload._id
+    const report = req.params
+
+    Post
+        .findByIdAndUpdate(report.report, { $addToSet: { 'reportes': currentUser } }, { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+})
 
 
 router.delete("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
