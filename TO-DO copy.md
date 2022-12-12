@@ -140,11 +140,15 @@
 
 
 ## SABADO 10
-- [ ] pull likes, para quitar los id con otra ruta y otro botón.
-- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Dislike.
+- [ 🧙🏽‍♂️ ] pull likes, para quitar los id con otra ruta y otro botón.
+
+
+## DOMINGO 11
 - [ ] Llamar publicaciones en la pantalla de perfil.
-- [ ] Push Array de post al crear, ahce Joao.
+- [ ] Push Array de post al crear, hace Joao.
+- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
+- [ ] Renderizado condicional por usuario el perfil y por Roles.
+- [ ] Añadir a friends.
 
 
 
@@ -155,7 +159,8 @@
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
-- [ ] Renderizado condicional por Roles.
+- [ ] CatchError del cliente.
+- [ ] Eliminar de amigos.
 
 
 
