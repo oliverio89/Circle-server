@@ -59,6 +59,7 @@ router.put("/editPost/:post_id", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 })
 
+
 router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
     const comenData = req.params
@@ -71,9 +72,12 @@ router.put("/likePost/:comenData", isAuthenticated, (req, res, next) => {
 
 // quitar el like
 
+
 router.put("/dislikePost/:disLikeData", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
     const disLikeData = req.params
+
+
 
     Post
         .findByIdAndUpdate(disLikeData.disLikeData, { $pull: { 'likes': currentUser } }, { new: true })
@@ -83,9 +87,11 @@ router.put("/dislikePost/:disLikeData", isAuthenticated, (req, res, next) => {
 
 //reportar un post
 
+
 router.put("/reportPost/:report", isAuthenticated, (req, res, next) => {
     const currentUser = req.payload._id
     const report = req.params
+
 
     Post
         .findByIdAndUpdate(report.report, { $addToSet: { 'reportes': currentUser } }, { new: true })
@@ -94,9 +100,12 @@ router.put("/reportPost/:report", isAuthenticated, (req, res, next) => {
 })
 
 
+
 router.delete("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
 
+
     const { post_id } = req.params
+
 
     Post
         .findByIdAndDelete(post_id)
@@ -104,7 +113,9 @@ router.delete("/deletePost/:post_id", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 
 
+
 })
 
 
-module.exports = router 
+
+module.exports = router
