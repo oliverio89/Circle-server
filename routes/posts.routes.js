@@ -10,7 +10,6 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
     Post
         .find()
         .populate({ path: "comments", populate: { path: "owner" } })
-        // .populate({ path: "likes" })
         .sort({ timestamps: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
@@ -32,13 +31,17 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
 
 router.post("/savePost", isAuthenticated, (req, res, next) => {
 
-    const { title, description, imageUrl } = req.body
+    const { title, description, imageUrl, lat, lng } = req.body
     const owner = req.payload
     console.log("hiiiooooooo", owner)
 
+    const location = {
+        type: "Point",
+        coordinates: [lat, lng],
+    };
 
     Post
-        .create({ title, description, imageUrl, owner })
+        .create({ title, description, imageUrl, owner, location })
         .then(response => {
             res.json(response)
             // User
