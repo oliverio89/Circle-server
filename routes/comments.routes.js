@@ -21,4 +21,18 @@ router.post("/saveComment/:post_id", isAuthenticated, (req, res, next) => {
         .catch(err => res.status(500).json(err))
 })
 
-module.exports = router 
+
+router.delete("/deleteComment/:comment_id", isAuthenticated, (req, res, next) => {
+    const { comment_id } = req.params
+    Comment
+        .findByIdAndDelete(comment_id)
+        .then(response => res.json(response))
+        .catch(err => next(err))
+
+
+})
+
+module.exports = router
+
+
+
