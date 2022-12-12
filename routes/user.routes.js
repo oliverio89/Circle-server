@@ -12,6 +12,7 @@ router.get("/giveMeUser/:user_id", isAuthenticated, (req, res, next) => {
     User
         .findById(user_id)
         .populate('friends')
+        .populate('createdPosts')
         .then(response => res.json(response))
         .catch(err => next(err))
 })

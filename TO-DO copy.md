@@ -160,12 +160,14 @@
 - [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
 - [ ] CatchError del cliente.
-- [ ] Eliminar de amigos.
+- [ ] Eliminar de amigos, y reload.
+- [ ] MEter fechas de publicación, .todatestring()
 
 
 
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
 - [ ] dejar el editar del perfil para una posterior revisión, ya que al modificar el usuario no modificamos el token del usuario de donde bebe el usuario.
+-[ ] Hacer paginado en el muro.
 
 ## code revew:
 
@@ -176,7 +178,7 @@
 
 
 
-
+código de api google map: AIzaSyDBRsIECfXTj6qsRh0UvGeBZlk0mXu6pd8
 
 
 
