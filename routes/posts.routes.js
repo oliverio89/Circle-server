@@ -4,9 +4,22 @@ const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
 router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
+    const { lat, lng } = req.body
 
+    console.log('soy req body', req.body)
     Post
-        .find()
+        .find(
+            {
+                location:
+                {
+                    $near:
+                    {
+                        $geometry: { type: "Point", coordinates: [lat, lng] },
+                        $maxDistance: 5000
+                    }
+                }
+            }
+        )
         .sort({ createdAt: -1 })
         .populate({ path: "owner" })
         .populate({ path: "comments", populate: { path: "owner" } })
