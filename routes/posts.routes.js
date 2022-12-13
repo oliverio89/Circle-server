@@ -22,8 +22,8 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
             }
         )
 
-        // .sort({ createdAt: -1 })
-        // .populate({ path: "owner" })
+        .sort({ createdAt: -1 })
+        .populate({ path: "owner" })
         .populate({ path: "comments", populate: { path: "owner" } })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
