@@ -49,10 +49,19 @@ router.post('/addFriend/:user_id', isAuthenticated, (req, res, next) => {
     const { user_id } = req.params
     const owner = req.payload._id
 
-
-
     User
         .findByIdAndUpdate(owner, { $addToSet: { "friends": user_id } })
+        .then()
+        .catch((err) => next(err))
+
+})
+
+router.post('/deleteFriend/:user_id', isAuthenticated, (req, res, next) => {
+    const { user_id } = req.params
+    const owner = req.payload._id
+
+    User
+        .findByIdAndUpdate(owner, { $pull: { "friends": user_id } })
         .then()
         .catch((err) => next(err))
 
