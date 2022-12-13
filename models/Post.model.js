@@ -61,6 +61,8 @@ const postSchema = new Schema(
 
 );
 
+postSchema.index({ location: '2dsphere' })
+
 const Post = model("Post", postSchema)
 
 module.exports = Post

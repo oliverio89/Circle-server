@@ -4,9 +4,10 @@ const { isAuthenticated } = require("../middleware/jwt.middleware")
 const Post = require('./../models/Post.model')
 
 router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
-    const { lat, lng } = req.body
 
-    console.log('soy req body', req.body)
+    const { lat, lng } = req.query
+
+    console.log('soy lat', lng)
     Post
         .find(
             {
@@ -15,13 +16,14 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
                     $near:
                     {
                         $geometry: { type: "Point", coordinates: [lat, lng] },
-                        $maxDistance: 5000
+                        $maxDistance: 10000,
                     }
                 }
             }
         )
-        .sort({ createdAt: -1 })
-        .populate({ path: "owner" })
+
+        // .sort({ createdAt: -1 })
+        // .populate({ path: "owner" })
         .populate({ path: "comments", populate: { path: "owner" } })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err));
