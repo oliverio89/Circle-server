@@ -2,9 +2,6 @@ const router = require("express").Router()
 const { isAuthenticated } = require("../middleware/jwt.middleware")
 const User = require('./../models/User.model')
 
-
-
-
 router.get("/giveMeUser/:user_id", isAuthenticated, (req, res, next) => {
 
     const { user_id } = req.params
@@ -16,11 +13,6 @@ router.get("/giveMeUser/:user_id", isAuthenticated, (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => next(err))
 })
-
-
-
-
-
 
 router.put("/editUser/:user_id", isAuthenticated, (req, res, next) => {
     const { user_id } = req.params
@@ -43,8 +35,6 @@ router.delete("/deleteUser/:user_id", isAuthenticated, (req, res, next) => {
         .catch(err => next(err))
 })
 
-// add new friend
-
 router.post('/addFriend/:user_id', isAuthenticated, (req, res, next) => {
     const { user_id } = req.params
     const owner = req.payload._id
@@ -66,7 +56,6 @@ router.post('/deleteFriend/:user_id', isAuthenticated, (req, res, next) => {
         .catch((err) => next(err))
 
 })
-
 
 module.exports = router
 

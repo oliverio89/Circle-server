@@ -9,17 +9,17 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
     console.log('soy req body', req.body)
     Post
         .find(
-            {
-                location:
-                {
-                    $near:
-                    {
-                        $geometry: { type: "Point", coordinates: [lat, lng] },
-                        $maxDistance: 5000
-                    }
-                }
-            }
-        )
+        // {
+        //     location:
+        //     {
+        //         $near:
+        //         {
+        //             $geometry: { type: "Point", coordinates: [lat, lng] },
+        //             $maxDistance: 5000
+        //         }
+        //     }
+        // }
+    )
         .sort({ createdAt: -1 })
         .populate({ path: "owner" })
         .populate({ path: "comments", populate: { path: "owner" } })
