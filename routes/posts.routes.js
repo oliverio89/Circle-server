@@ -38,6 +38,7 @@ router.get("/getOnePost/:post_id", isAuthenticated, (req, res, next) => {
         .populate({ path: "comments", populate: { path: "owner" } })
         .then(response => res.json(response))
         .catch(err => next(err))
+
 })
 
 router.post("/savePost", isAuthenticated, (req, res, next) => {
