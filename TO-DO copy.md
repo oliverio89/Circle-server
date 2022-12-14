@@ -144,30 +144,32 @@
 
 
 ## DOMINGO 11
-- [ ] Llamar publicaciones en la pantalla de perfil.
-- [ ] Push Array de post al crear, hace Joao.
-- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Renderizado condicional por usuario el perfil y por Roles.
-- [ ] Añadir a friends.
+- [ 🧙🏽‍♂️ ] Llamar publicaciones en la pantalla de perfil.
+- [ 🧙🏽‍♂️ ] Push Array de post al crear, hace Joao.
+- [ 🧙🏽‍♂️ ] Renderizado condicional por usuario el perfil y por Roles.
+- [ 🧙🏽‍♂️ ] Añadir a friends y quitar friends
+- [ 🧙🏽‍♂️ ] Eliminar de amigos, y reload.
 
 
 
 
 
 ## DÍAS SIGUIENTES
+- [ 🧙🏽‍♂️ ] Google map api. geolocalización, predict-name.
+- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
 - [ ] Agregar a favoritos.
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
-- [ ] Google map api. geolocalización, predict-name.
 - [ ] Revisar carpeta public.
 - [ ] CatchError del cliente.
-- [ ] Eliminar de amigos, y reload.
 - [ ] MEter fechas de publicación, .todatestring()
+- [ ] Hacer paginado en el muro.
+- [ ] Arreglar botón de friends de add y remove.
+- [ ] Arreglar botón de eddit condicional con el user.
 
 
 
 - [ ] Multipoligono con la geolocalización por barrios, con geodata.
 - [ ] dejar el editar del perfil para una posterior revisión, ya que al modificar el usuario no modificamos el token del usuario de donde bebe el usuario.
--[ ] Hacer paginado en el muro.
 
 ## code revew:
 
@@ -178,7 +180,7 @@
 
 
 
-código de api google map: AIzaSyDBRsIECfXTj6qsRh0UvGeBZlk0mXu6pd8
+
 
 
 
