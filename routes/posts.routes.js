@@ -7,7 +7,7 @@ router.get("/getAllPosts", isAuthenticated, (req, res, next) => {
 
     const { lat, lng } = req.query
 
-    console.log('soy lat', lng)
+
     Post
         .find(
             {

@@ -10,7 +10,7 @@ const postSchema = new Schema(
         description: {
             type: String,
             required: [true, 'La descripción es obligatoria.'],
-            minlength: [20, 'La descripción debe tener min. 20 caracteres']
+            minlength: [4, 'La descripción debe tener min. 4 caracteres']
         },
         imageUrl: {
             type: String,

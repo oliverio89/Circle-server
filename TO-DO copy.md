@@ -150,21 +150,25 @@
 - [ 🧙🏽‍♂️ ] Añadir a friends y quitar friends
 - [ 🧙🏽‍♂️ ] Eliminar de amigos, y reload.
 
+# MIÉRCOLES 14
+- [ 🧙🏽‍♂️ ] Google map api. geolocalización, predict-name.
+- [  ] Hacer desplegable con bootstrap react para los comentarios de los post. xia
+- [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
+- [ ] Revisar carpeta public. vÍCTOR
+- [ ] CatchError del cliente. Joao.
+- [ ] MEter fechas de publicación, .todatestring()
+- [ 🧙🏽‍♂️ ] Arreglar botón de friends de add y remove.
+- [ 🧙🏽‍♂️ ] Arreglar botón de eddit condicional con el user.
+- [ ] Modificar About Us, Y Home page.
+- [ ] Rehacer el footer.
+
 
 
 
 
 ## DÍAS SIGUIENTES
-- [ 🧙🏽‍♂️ ] Google map api. geolocalización, predict-name.
-- [ ] Hacer desplegable con bootstrap react para los comentarios de los post.
-- [ ] Agregar a favoritos.
-- [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
-- [ ] Revisar carpeta public.
-- [ ] CatchError del cliente.
-- [ ] MEter fechas de publicación, .todatestring()
 - [ ] Hacer paginado en el muro.
-- [ ] Arreglar botón de friends de add y remove.
-- [ ] Arreglar botón de eddit condicional con el user.
+- [ ] Agregar a favoritos.
 
 
 

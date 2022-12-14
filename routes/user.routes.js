@@ -41,7 +41,7 @@ router.post('/addFriend/:user_id', isAuthenticated, (req, res, next) => {
 
     User
         .findByIdAndUpdate(owner, { $addToSet: { "friends": user_id } })
-        .then()
+        .then(response => res.json(response))
         .catch((err) => next(err))
 
 })
@@ -52,7 +52,7 @@ router.post('/deleteFriend/:user_id', isAuthenticated, (req, res, next) => {
 
     User
         .findByIdAndUpdate(owner, { $pull: { "friends": user_id } })
-        .then()
+        .then(response => res.json(response))
         .catch((err) => next(err))
 
 })

@@ -87,6 +87,35 @@ router.post('/login', (req, res, next) => {
         .catch(err => next(err));
 });
 
+router.post('/refreshToken', isAuthenticated, (req, res, next) => {
+
+    const tokenId = req.payload._id
+
+    User
+        .findById(tokenId)
+        .then((foundUser) => {
+
+
+            const { _id, email, username, imageUrl, name, bio, role, friends } = foundUser;
+
+
+            const payload = { _id, email, username, imageUrl, name, bio, role, friends }
+
+
+            const authToken = jwt.sign(
+                payload,
+                process.env.TOKEN_SECRET,
+                { algorithm: 'HS256', expiresIn: "6h" }
+            )
+
+
+            res.status(200).json({ authToken })
+
+
+        })
+        .catch(err => next(err));
+});
+
 
 
 
