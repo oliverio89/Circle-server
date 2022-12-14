@@ -24,7 +24,7 @@ const userSchema = new Schema(
     },
     imageUrl: {
       type: String,
-      default: 'hola mundo'
+      default: "https://res.cloudinary.com/dtcpa2jtc/image/upload/v1671041357/imagen_por_defecto_xwpnsv.webp"
 
     },
     friends: [{
