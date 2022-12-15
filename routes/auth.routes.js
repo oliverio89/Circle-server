@@ -2,6 +2,7 @@ const router = require("express").Router()
 const User = require("../models/User.model")
 
 
+
 const { isAuthenticated } = require('./../middleware/jwt.middleware')
 
 
@@ -54,25 +55,9 @@ router.post('/refreshToken', isAuthenticated, (req, res, next) => {
 
     User
         .findById(tokenId)
-        .then((foundUser) => {
-
-
-            const { _id, email, username, imageUrl, name, bio, role, friends } = foundUser;
-
-
-            const payload = { _id, email, username, imageUrl, name, bio, role, friends }
-
-
-            const authToken = jwt.sign(
-                payload,
-                process.env.TOKEN_SECRET,
-                { algorithm: 'HS256', expiresIn: "6h" }
-            )
-
-
-            res.status(200).json({ authToken })
-
-
+        .then(user => {
+            const token = user.signToken()
+            res.json(token)
         })
         .catch(err => next(err));
 });
