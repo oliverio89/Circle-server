@@ -6,7 +6,7 @@ const { isAuthenticated } = require('./../middleware/jwt.middleware')
 
 
 router.post('/signup', (req, res, next) => {
-    const { email, password, name, username, imageUrl, bio, role } = req.body
+    const { email, password, name, username, imageUrl, bio } = req.body
 
 
 
@@ -14,7 +14,7 @@ router.post('/signup', (req, res, next) => {
         .create({ email, password, username, name, imageUrl, bio, })
 
         .then((createdUser) => {
-            console.log(createdUser)
+
 
             const { email, username, name, _id, imageUrl, bio } = createdUser
             const user = { email, username, name, _id, imageUrl, bio }
@@ -37,7 +37,6 @@ router.post('/login', (req, res, next) => {
     User
         .findOne({ email })
         .then((foundUser) => {
-            console.log('quien eres tu???', foundUser)
             if (foundUser && foundUser.validatePassword(password)) {
                 res.status(200).json({ authToken: foundUser.signToken() })
             }
