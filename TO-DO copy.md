@@ -106,6 +106,7 @@
   - [  ] Admin-Panel
   - [  ] About us
   - [  ] Footer
+  
 
 
 ## MIERCOLES 7
@@ -154,13 +155,13 @@
 - [ 🧙🏽‍♂️ ] Google map api. geolocalización, predict-name.
 - [  ] Hacer desplegable con bootstrap react para los comentarios de los post. xia
 - [ ] SEEDERS. ( SOLO BUSCAR LA INFORMACIÓN )
-- [ ] Revisar carpeta public. vÍCTOR
+- [ 🧙🏽‍♂️ ] Revisar carpeta public. vÍCTOR
 - [ ] CatchError del cliente. Joao.
-- [ ] MEter fechas de publicación, .todatestring()
+- [ 🧙🏽‍♂️ ] MEter fechas de publicación, .todatestring()
 - [ 🧙🏽‍♂️ ] Arreglar botón de friends de add y remove.
 - [ 🧙🏽‍♂️ ] Arreglar botón de eddit condicional con el user.
-- [ ] Modificar About Us, Y Home page.
-- [ ] Rehacer el footer.
+- [ 🧙🏽‍♂️ ] Modificar About Us, Y Home page.
+- [ 🧙🏽‍♂️ ] Rehacer el footer.
 
 
 

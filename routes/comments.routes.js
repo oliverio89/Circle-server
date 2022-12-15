@@ -18,7 +18,7 @@ router.post("/saveComment/:post_id", isAuthenticated, (req, res, next) => {
             return Post.findByIdAndUpdate(post_id, { $push: { 'comments': commentId } }, { new: true })
         })
         .then((post) => { res.json(post) })
-        .catch(err => res.status(500).json(err))
+        .catch(err => next(err))
 })
 
 
