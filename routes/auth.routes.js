@@ -11,7 +11,6 @@ const { isAuthenticated } = require('./../middleware/jwt.middleware')
 
 router.post('/signup', (req, res, next) => {
     const { email, password, name, username, imageUrl, bio } = req.body
-    console.log('HOLA ', req.body)
     if (password.length < 2) {
         res.status(400).json({ message: 'Password must have at least 3 characters' })
         return
@@ -20,7 +19,6 @@ router.post('/signup', (req, res, next) => {
     User
         .findOne({ email })
         .then((foundUser) => {
-            console.log('USUARIO ENCONTRADO', foundUser)
 
             if (foundUser) {
                 res.status(200).json({ message: "User already exists." })
@@ -34,7 +32,7 @@ router.post('/signup', (req, res, next) => {
             return User.create({ email, password: hashedPassword, username, name, imageUrl, bio })
         })
         .then((createdUser) => {
-            console.log(createdUser)
+
 
             const { email, username, name, _id, imageUrl, bio } = createdUser
             const user = { email, username, name, _id, imageUrl, bio, role, friends }
