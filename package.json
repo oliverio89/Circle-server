@@ -10,10 +10,10 @@
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.3",
     "cookie-parse": "^0.4.0",
-    "cookie-parser": "^1.4.6",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.21.2",
     "express-jwt": "^7.7.8",
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
@@ -21,7 +21,7 @@
     "morgan": "^1.10.0",
     "multer": "^2.0.0",
     "multer-storage-cloudinary": "^4.0.0",
-    "socket.io": "^4.5.4",
+    "socket.io": "^4.8.1",
     "token-store": "^1.0.0"
   }
 }
