@@ -21,7 +21,7 @@
     "morgan": "^1.10.0",
     "multer": "^2.0.0",
     "multer-storage-cloudinary": "^4.0.0",
-    "socket.io": "^4.5.4",
+    "socket.io": "^4.8.1",
     "token-store": "^1.0.0"
   }
 }
